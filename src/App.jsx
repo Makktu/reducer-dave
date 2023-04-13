@@ -22,6 +22,8 @@ const ACTION = {
   TG_COLOR: "tgColor",
 };
 
+// the above 2 functions can go outside of the component function
+
 function App() {
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
