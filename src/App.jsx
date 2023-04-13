@@ -1,5 +1,7 @@
 import { useReducer } from "react";
 
+import Button from "./Button";
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "increment":
@@ -45,7 +47,10 @@ function App() {
           }
         />
         <p className="count">{state.count}</p>
-        <button onClick={() => dispatch({ type: ACTION.DECREMENT })}>-</button>
+        <Button
+          onClick={() => dispatch({ type: ACTION.DECREMENT })}
+          value="-"
+        ></Button>
         <button onClick={() => dispatch({ type: ACTION.INCREMENT })}>+</button>
         <button onClick={() => dispatch({ type: ACTION.TG_COLOR })}>
           Color
